@@ -2,7 +2,7 @@
 
 Dans les chapitres précédents, nous avons vu comment créer une variable c'est à dire définir une étiquette sur un objet.
 
-Vous vous rendrez compte très rapidement qu'il est utile de pouvoir avoir plusieurs objets qui correspondent à une seule étiquette. 
+Vous vous rendrez compte très rapidement qu'il est utile de pouvoir avoir plusieurs objets qui correspondent à une seule étiquette.  
 C'est là qu'entre en scène les *collections*  
 
 ## Les listes
@@ -24,8 +24,8 @@ Voyons comment créer une liste
 []
 ```
 
-*Mais pourquoi Python répond [ ] ?*
-Car il existe une seconde façon de créer une liste avec l'utilisation des crochets. 
+*Mais pourquoi Python répond [ ] ?*  
+Car il existe une seconde façon de créer une liste avec l'utilisation des crochets.  
 La syntaxe est plus courte et en plus cela permet de créer une liste avec des valeurs en une seule ligne! 
 ```python
 >>> x = ['baguette', 'bave', 'grimoire', 1, 0.5]
@@ -47,7 +47,8 @@ Bien entendu, les listes ne sont pas figées : on peut ajouter et supprimer des 
 ['baguette', 'grimoire', 1, 0.5, -1, 'a', 'b']
 ```
 ####A vos ordres ! 
-Vous l'aurez remarqués, les listes sont ordonnées : lorsqu'on ajoute un objet, celui-ci se retrouve en dernière place. Les objets ont donc une place précise dans la liste et on peut y accéder via son *indice*
+Vous l'aurez remarqués, les listes sont ordonnées : lorsqu'on ajoute un objet, celui-ci se retrouve en dernière place.  
+Les objets ont donc une place précise dans la liste et on peut y accéder via son *indice*  
 Attention néanmoins, **le premier objet se trouve à l'indice 0**
 ```python
 >>> x = ['baguette', 'bave', 'grimoire', 1, 0.5]
@@ -58,14 +59,14 @@ Traceback (most recent call last):
 	File "<stdin>", line 1, in <module>
 IndexError: list index out of range
 ```
-Python nous avertit que nous avons essayé d'accéder à un indice qui n'existe pas. 
+Python nous avertit que nous avons essayé d'accéder à un indice qui n'existe pas.  
 En effet, comme il y a 5 objets dans la liste x, le dernier objet se trouve à l'indice 4.
 
 ```python
 >>> x[-1]
 0.5
 ```
-Vous ne rêvez pas ! On peut également accéder à un élément avec un indice négatif. 
+Vous ne rêvez pas ! On peut également accéder à un élément avec un indice négatif.  
 -1 correspondant au élément, -2 à l'avant dernier , etc
 
 ####Les sous listes
