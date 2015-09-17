@@ -67,7 +67,7 @@ En effet, comme il y a 5 objets dans la liste x, le dernier objet se trouve à l
 0.5
 ```
 Vous ne rêvez pas ! On peut également accéder à un élément avec un indice négatif.  
--1 correspondant au élément, -2 à l'avant dernier , etc
+-1 correspondant au dernier élément, -2 à l'avant dernier , etc
 
 ####Les sous listes
 Les listes offres décidément beaucoup de possibilités. Une d'entre elle est de pouvoir "découper" la liste pour n'en n'utiliser qu'une *tranche*
@@ -75,7 +75,7 @@ Les listes offres décidément beaucoup de possibilités. Une d'entre elle est d
 >>> x = ['baguette', 'bave', 'grimoire', 1, 0.5]
 >>> x[1:4] # récupère les objets de l'indice 1 à l'indice 4 non inclus
 ['bave', 'grimoire', 1]
->>> x[1:-2] # de l'objet d'indice 1 jusqu'à celui d'indice -2 n'est pas inclus
+>>> x[1:-2] # de l'objet d'indice 1 jusqu'à celui d'indice -2 non inclus
 ['bave', 'grimoire']
 >>> x[1:] # de l'objet d'indice 1 jusqu'au dernier
 ['bave', 'grimoire', 1, 0.5]
