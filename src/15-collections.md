@@ -46,6 +46,21 @@ Bien entendu, les listes ne sont pas figées : on peut ajouter et supprimer des 
 >>> x.extend(y) # ajoute tous les objets de la liste y dans la liste x
 ['baguette', 'grimoire', 1, 0.5, -1, 'a', 'b']
 ```
+Contrairement au variable ordinaire, si on colle deux étiquettes sur la même liste, les changements sur une étiquette sont répercutées sur l'autre
+```python
+>>> x = ['baguette', 'bave', 'grimoire']
+>>> y = x
+>>> x
+['baguette', 'bave', 'grimoire']
+>>> y
+['baguette', 'bave', 'grimoire']
+>>> x.append(1)
+>>> x
+['baguette', 'bave', 'grimoire', 1]
+>>> y
+['baguette', 'bave', 'grimoire', 1]
+```
+
 ####A vos ordres ! 
 Vous l'aurez remarqués, les listes sont ordonnées : lorsqu'on ajoute un objet, celui-ci se retrouve en dernière place.  
 Les objets ont donc une place précise dans la liste et on peut y accéder via son *indice*  
@@ -73,21 +88,45 @@ Vous ne rêvez pas ! On peut également accéder à un élément avec un indice 
 Les listes offres décidément beaucoup de possibilités. Une d'entre elle est de pouvoir "découper" la liste pour n'en n'utiliser qu'une *tranche*
 ```python
 >>> x = ['baguette', 'bave', 'grimoire', 1, 0.5]
->>> x[1:4] # récupère les objets de l'indice 1 à l'indice 4 non inclus
+>>> x[1:4] # récupère la liste des objets de l'indice 1 à l'indice 4 non inclus
 ['bave', 'grimoire', 1]
->>> x[1:-2] # de l'objet d'indice 1 jusqu'à celui d'indice -2 non inclus
+>>> x[1:-2] # liste des objets de l'indice 1 jusqu'à celui d'indice -2 non inclus
 ['bave', 'grimoire']
->>> x[1:] # de l'objet d'indice 1 jusqu'au dernier
+>>> x[1:] # liste des objets de l'indice 1 jusqu'au dernier
 ['bave', 'grimoire', 1, 0.5]
->>> x[:3] # du premier objet jusqu'à l'objet d'indice 3 non inclus
+>>> x[:3] # liste des objets du premier objet jusqu'à l'objet d'indice 3 non inclus
 ['baguette', 'bave', 'grimoire']
 ```
+## Les tuples
+Les tuples sont un deuxième type de collections.  Contrairement au liste, ce sont des objets *immutables*. Cela signifie que une fois créé, un tuple ne peut être modifié.
+```python
+>>> x = ('baguette', 'bave', 'grimoire', 1, 0.5)
+>>> x
+('baguette', 'bave', 'grimoire', 1, 0.5)
+```
+Les tuples partages de nombreuses caractéristiques avec les listes:
 
+ -  Les éléments d'un tuple ont un ordre défini
+ - On peut accéder directement à un objet via son indice
+	 - Les indices de tuples débutent à zéro
+	 - Les indices négatifs comptent à partir du dernier élément du tuple 
+ - On peut découper un tuple pour obtenir une tranche
+ 
+ ```python
+>>> x = ('baguette', 'bave', 'grimoire', 1, 0.5)
+>>> x[1:4] # récupère le tuple avec les objets de l'indice 1 à l'indice 4 non inclus
+('bave', 'grimoire', 1)
+>>> x[1:-2] #  tuple avec les objets de l'indice 1 jusqu'à celui d'indice -2 non inclus
+('bave', 'grimoire')
+>>> x[1:] # tuple avec les objets de l'indice 1 jusqu'au dernier
+('bave', 'grimoire', 1, 0.5)
+>>> x[:3] # tuple avec les objets du premier jusqu'à l'objet d'indice 3 non inclus
+('baguette', 'bave', 'grimoire')
+```
 
+En revanche, il n'existe aucune façon d'ajouter, modifier ou supprimer un élément.  
+ 
+*Quelle est l'utilité des tuples ?*  
 
-
-
-
-
-
-
+Les tuples sont préconisés lors il n'y a aucun traitement à effectuer sur les objets présent dans le tuple.  
+Si on a besoin uniquement de lire les valeurs de objet présent dans une collection, il faudra mieux utiliser les tuples car le traitement de ces derniers est plus rapide que celui des listes.
